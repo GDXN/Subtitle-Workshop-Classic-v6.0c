@@ -1,7 +1,7 @@
 // Add spaces after punctuation marks -!  ?  ;  .  , 
  // Made by Bedazzle, 2011.09.25
 
- Program AddSpacesAfterComma;
+ Program AddSpacesAfterPunctuation;
 
  // ---------------------------------------------
  Const
@@ -55,14 +55,6 @@
    For i:= 0 to n-1 do
    Begin
      Txt:= GetSubtitleText (i);
-	 txt := ReplaceAll(txt, ', ', ',');
-	 txt := ReplaceAll(txt, ', ', ',');
-	 txt := ReplaceAll(txt, ', ', ',');
-	 
-	 txt := ReplaceAll(txt, ',', ', ');
-	 
-	 {
-	 Txt := StringReplace(Txt, ',' , ', ', [rfReplaceAll]);
 
      Txt:= ReplaceAll (txt, '?', '?');
      Txt:= ReplaceAll (txt, '!', '!');
@@ -72,7 +64,7 @@
      Txt:= ReplaceAll (txt, '...,', '...');
      Txt:= ReplaceAll (txt, '', '');
      Txt:= TrimLines (txt);
-     }
+
      SetSubtitleText (i, txt);
    End;
  End.
