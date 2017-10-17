@@ -2,22 +2,28 @@
 // URL: subworkshop.sf.net
 // Licesne: GPL v3
 // Copyright: See Subtitle API's copyright information
-// File Description: Adobe Encore DVD (Old) subtitle format saving functionality
+// File Description: Scanlite subtitle format saving functionality
 
-function SubtitlesToFile_ADOBEENCOREDVD(Subtitles: TSubtitles; const FileName: String; const FPS: Single; From: Integer = -1; UpTo: Integer = -1) : Boolean;
+// by Bedazzle 2005.11.18 start
+function SubtitlesToFile_SCANTITLE(Subtitles: TSubtitles; const FileName: String; From: Integer = -1; UpTo: Integer = -1): Boolean;
 var
   tmpSubFile : TSubtitleFile;
-  i          : Integer;  
+  i, Count   : Integer;
+  z: shortstring;
 begin
+  Count  := 1;
   Result := True;
   tmpSubFile := TSubtitleFile.Create;
   try
     for i := From to UpTo do
     begin
-      tmpSubFile.Add(MSToHHMMSSFFTime(Subtitles.InitialTime[i], FPS) + ' ' +
-                     MSToHHMMSSFFTime(Subtitles.FinalTime[i], FPS) + ' ' +
-                     RemoveSWTags(Subtitles.Text[i], True, True, True, True)
-                     );
+      z := IntToStr(Count);
+      z := copy('     ', 1, 5-length(z)) + z;
+      tmpSubFile.Add(z + '       ' + TimeToString(Subtitles[i].InitialTime, 'hh:mm:ss:zz') + '   ' + TimeToString(Subtitles[i].FinalTime, 'hh:mm:ss:zz'), False);
+
+      tmpSubFile.Add(RemoveSWTags(Subtitles[i].Text, True, True, True, True), False); //RemoveSWTags added by adenry 2013.04.12
+      tmpSubFile.Add('', False);
+      Inc(Count);
     end;
 
     try
@@ -38,3 +44,4 @@ begin
     tmpSubFile.Free;
   end;
 end;
+// by Bedazzle 2005.11.18 end

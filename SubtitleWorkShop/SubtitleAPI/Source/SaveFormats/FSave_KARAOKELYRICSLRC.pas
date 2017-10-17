@@ -2,22 +2,27 @@
 // URL: subworkshop.sf.net
 // Licesne: GPL v3
 // Copyright: See Subtitle API's copyright information
-// File Description: Adobe Encore DVD (Old) subtitle format saving functionality
+// File Description: Karaoke Lyrics LRC subtitle format saving functionality
 
-function SubtitlesToFile_ADOBEENCOREDVD(Subtitles: TSubtitles; const FileName: String; const FPS: Single; From: Integer = -1; UpTo: Integer = -1) : Boolean;
+function SubtitlesToFile_KARAOKELYRICSLRC(Subtitles: TSubtitles; const FileName: String; From: Integer = -1; UpTo: Integer = -1): Boolean;
 var
   tmpSubFile : TSubtitleFile;
-  i          : Integer;  
+  i          : Integer;
 begin
   Result := True;
   tmpSubFile := TSubtitleFile.Create;
   try
+    tmpSubFile.Add('[ti:Project title]', False);
+    tmpSubFile.Add('[ar:Project author]', False);
+    tmpSubFile.Add('[la:af]', False);
+    tmpSubFile.Add('Project title', False);
+    tmpSubFile.Add('', False);
+
     for i := From to UpTo do
     begin
-      tmpSubFile.Add(MSToHHMMSSFFTime(Subtitles.InitialTime[i], FPS) + ' ' +
-                     MSToHHMMSSFFTime(Subtitles.FinalTime[i], FPS) + ' ' +
-                     RemoveSWTags(Subtitles.Text[i], True, True, True, True)
-                     );
+      Subtitles.Text[i] := RemoveSWTags(Subtitles.Text[i], True, True, True);
+      tmpSubFile.Add('[' + TimeToString(Subtitles[i].InitialTime, 'mm:ss.zz') + ']' + ReplaceEnters(Subtitles[i].Text, ''), False);
+      tmpSubFile.Add('[' + TimeToString(Subtitles[i].FinalTime, 'mm:ss.zz') + ']');
     end;
 
     try

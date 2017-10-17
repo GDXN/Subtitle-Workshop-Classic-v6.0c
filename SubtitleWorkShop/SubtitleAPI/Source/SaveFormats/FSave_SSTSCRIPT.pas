@@ -2,22 +2,25 @@
 // URL: subworkshop.sf.net
 // Licesne: GPL v3
 // Copyright: See Subtitle API's copyright information
-// File Description: Adobe Encore DVD (Old) subtitle format saving functionality
+// File Description: Stream SubText Script subtitle format saving functionality
 
-function SubtitlesToFile_ADOBEENCOREDVD(Subtitles: TSubtitles; const FileName: String; const FPS: Single; From: Integer = -1; UpTo: Integer = -1) : Boolean;
+function SubtitlesToFile_SSTSCRIPT(Subtitles: TSubtitles; const FileName: String; From: Integer = -1; UpTo: Integer = -1): Boolean;
 var
   tmpSubFile : TSubtitleFile;
-  i          : Integer;  
+  i          : Integer;
 begin
   Result := True;
   tmpSubFile := TSubtitleFile.Create;
   try
+
+    tmpSubFile.Add('SST 2.0.73', False);
+    tmpSubFile.Add('[TITLES]', False);
+    tmpSubFile.Add('fps=25.00', False);
+
     for i := From to UpTo do
     begin
-      tmpSubFile.Add(MSToHHMMSSFFTime(Subtitles.InitialTime[i], FPS) + ' ' +
-                     MSToHHMMSSFFTime(Subtitles.FinalTime[i], FPS) + ' ' +
-                     RemoveSWTags(Subtitles.Text[i], True, True, True, True)
-                     );
+      Subtitles.Text[i] := RemoveSWTags(Subtitles.Text[i], True, True, True);
+      tmpSubFile.Add(IntToStr(i+1) + #9 + 'Default' + #9 + TimeToString(Subtitles[i].InitialTime, 'hh:mm:ss.zz') + #9 + TimeToString(Subtitles[i].FinalTime, 'hh:mm:ss.zz') + #9 + ReplaceEnters(Subtitles[i].Text,'~') + #9 + 'SubRip', False);
     end;
 
     try

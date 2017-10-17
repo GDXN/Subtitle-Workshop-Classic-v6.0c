@@ -2,24 +2,29 @@
 // URL: subworkshop.sf.net
 // Licesne: GPL v3
 // Copyright: See Subtitle API's copyright information
-// File Description: Adobe Encore DVD (Old) subtitle format saving functionality
+// File Description: JACOSub 2.7+ subtitle format saving functionality
 
-function SubtitlesToFile_ADOBEENCOREDVD(Subtitles: TSubtitles; const FileName: String; const FPS: Single; From: Integer = -1; UpTo: Integer = -1) : Boolean;
+function SubtitlesToFile_JACOSUB(Subtitles: TSubtitles; const FileName: String; From: Integer = -1; UpTo: Integer = -1): Boolean;
 var
   tmpSubFile : TSubtitleFile;
-  i          : Integer;  
+  i          : Integer;
 begin
   Result := True;
   tmpSubFile := TSubtitleFile.Create;
   try
+    tmpSubFile.Add('#T100', False);
+    tmpSubFile.Add('', False);
+    tmpSubFile.Add('# Directive entries', False);
+    tmpSubFile.Add('#D', False);
+    for i := 1 to 29 do
+      tmpSubFile.Add('#D'+IntToStr(i), False);
+    tmpSubFile.Add('', False);
+
     for i := From to UpTo do
     begin
-      tmpSubFile.Add(MSToHHMMSSFFTime(Subtitles.InitialTime[i], FPS) + ' ' +
-                     MSToHHMMSSFFTime(Subtitles.FinalTime[i], FPS) + ' ' +
-                     RemoveSWTags(Subtitles.Text[i], True, True, True, True)
-                     );
+      Subtitles.Text[i] := RemoveSWTags(Subtitles.Text[i], True, True, True);
+      tmpSubFile.Add(TimeToString(Subtitles[i].InitialTime, 'h:mm:ss.zz') + ' ' + TimeToString(Subtitles[i].FinalTime, 'h:mm:ss.zz') + ' {NTP} ' + ReplaceEnters(Subtitles[i].Text,'\n'), False);
     end;
-
     try
        if UTF8File
 	  then begin           
