@@ -1,6 +1,7 @@
-package PascalScript_RO_D6;
+package PascalScript_RO_D17;
 
 {$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
 {$ALIGN 8}
 {$ASSERTIONS ON}
 {$BOOLEVAL OFF}
@@ -11,7 +12,7 @@ package PascalScript_RO_D6;
 {$LOCALSYMBOLS ON}
 {$LONGSTRINGS ON}
 {$OPENSTRINGS ON}
-{$OPTIMIZATION ON}
+{$OPTIMIZATION OFF}
 {$OVERFLOWCHECKS OFF}
 {$RANGECHECKS OFF}
 {$REFERENCEINFO ON}
@@ -22,15 +23,19 @@ package PascalScript_RO_D6;
 {$WRITEABLECONST OFF}
 {$MINENUMSIZE 1}
 {$IMAGEBASE $400000}
-{$DESCRIPTION 'RemObjects Pascal Script - RemObjects SDK 4.0 Integration'}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'RemObjects Pascal Script - RemObjects SDK Integration'}
 {$IMPLICITBUILD OFF}
 
 requires
   rtl,
-  indy,
-  PascalScript_Core_D6,
-  RemObjects_Server_D6,
-  RemObjects_Indy_D6,
+  IndyCore,
+  IndySystem,
+  IndyProtocols,
+  PascalScript_Core_D17,
+  RemObjects_Server_D17,
+  RemObjects_Indy_D17,
   dbrtl,
   vcl,
   vclx;

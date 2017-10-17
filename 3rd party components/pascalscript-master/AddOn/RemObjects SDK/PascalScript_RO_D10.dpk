@@ -1,4 +1,4 @@
-package PascalScript_RO_D6;
+package PascalScript_RO_D10;
 
 {$R *.res}
 {$ALIGN 8}
@@ -27,10 +27,14 @@ package PascalScript_RO_D6;
 
 requires
   rtl,
-  indy,
-  PascalScript_Core_D6,
-  RemObjects_Server_D6,
-  RemObjects_Indy_D6,
+  {$IFDEF RemObjects_INDY9}
+  Indy,
+  {$ELSE}
+  IndyCore, IndySystem, IndyProtocols,
+  {$ENDIF}
+  PascalScript_Core_D10,
+  RemObjects_Server_D10,
+  RemObjects_Indy_D10,
   dbrtl,
   vcl,
   vclx;
