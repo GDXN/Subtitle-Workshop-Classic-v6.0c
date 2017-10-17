@@ -1,0 +1,311 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{93521E49-1084-4A7E-B77D-929E2E2C3E4D}</ProjectGuid>
+        <MainSource>SubtitleWorkshop.dpr</MainSource>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Debug</Config>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Application</AppType>
+        <FrameworkType>VCL</FrameworkType>
+        <ProjectVersion>18.2</ProjectVersion>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <DCC_DcuOutput>DCU</DCC_DcuOutput>
+        <DCC_ExeOutput>Bin</DCC_ExeOutput>
+        <DCC_S>false</DCC_S>
+        <DCC_UsePackage>SWComponents;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_UnitSearchPath>SWComponents\Sources;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <DCC_E>false</DCC_E>
+        <DCC_K>false</DCC_K>
+        <DCC_DebugInformation>1</DCC_DebugInformation>
+        <DCC_F>false</DCC_F>
+        <DCC_Define>DEBU;$(DCC_Define)</DCC_Define>
+        <DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;FMXTee.Editor;FMXTee.Chart;System.Win;$(DCC_Namespace)</DCC_Namespace>
+        <DCC_ImageBase>00400000</DCC_ImageBase>
+        <SanitizedProjectName>SubtitleWorkshop</SanitizedProjectName>
+        <DCC_SymbolReferenceInfo>1</DCC_SymbolReferenceInfo>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <DCC_Optimize>false</DCC_Optimize>
+        <DCC_N>true</DCC_N>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <Icon_MainIcon>SubtitleWorkshop_Icon1.ico</Icon_MainIcon>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <DCC_Namespace>Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
+        <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <AppEnableHighDPI>true</AppEnableHighDPI>
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+        <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+        <DCC_DebugInformation>2</DCC_DebugInformation>
+        <DCC_SymbolReferenceInfo>2</DCC_SymbolReferenceInfo>
+        <DCC_DebugDCUs>true</DCC_DebugDCUs>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <AppEnableHighDPI>true</AppEnableHighDPI>
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Build>450</VerInfo_Build>
+        <VerInfo_Debug>true</VerInfo_Debug>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.450;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=6.0.7;Comments=Version 6.0g</VerInfo_Keys>
+        <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
+        <DCC_DebugDCUs>true</DCC_DebugDCUs>
+        <DCC_DebugInformation>2</DCC_DebugInformation>
+        <DCC_SymbolReferenceInfo>2</DCC_SymbolReferenceInfo>
+        <DCC_IMPLICIT_STRING_CAST>false</DCC_IMPLICIT_STRING_CAST>
+    </PropertyGroup>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="Forms\formAbout.pas">
+            <Form>frmAbout</Form>
+        </DCCReference>
+        <DCCReference Include="Forms\formAdjustSubsEnterNewSyncPoint.pas">
+            <Form>frmEnterNewSyncPoint</Form>
+        </DCCReference>
+        <DCCReference Include="Forms\formAdjustSubtitles.pas">
+            <Form>frmAdjustSubtitles</Form>
+        </DCCReference>
+        <DCCReference Include="Forms\formAutomaticDurations.pas">
+            <Form>frmAutomaticDurations</Form>
+        </DCCReference>
+        <DCCReference Include="Forms\formBatchConvert.pas">
+            <Form>frmBatchConvert</Form>
+        </DCCReference>
+        <DCCReference Include="Forms\formConvertCase.pas">
+            <Form>frmConvertCase</Form>
+        </DCCReference>
+        <DCCReference Include="Forms\formCustomFormats.pas">
+            <Form>frmCustomFormats</Form>
+        </DCCReference>
+        <DCCReference Include="Forms\formDivideLines.pas">
+            <Form>frmDivideLines</Form>
+        </DCCReference>
+        <DCCReference Include="Forms\formDurationLimits.pas">
+            <Form>frmDurationLimits</Form>
+        </DCCReference>
+        <DCCReference Include="Forms\formInfoErrors.pas">
+            <Form>frmInfoErrors</Form>
+        </DCCReference>
+        <DCCReference Include="Forms\formInfoErrorsSettings.pas">
+            <Form>frmInfoErrorsSettings</Form>
+        </DCCReference>
+        <DCCReference Include="Forms\formJoin.pas">
+            <Form>frmJoin</Form>
+        </DCCReference>
+        <DCCReference Include="Forms\formMain.pas">
+            <Form>frmMain</Form>
+        </DCCReference>
+        <DCCReference Include="Forms\formOutputSettings.pas">
+            <Form>frmOutputSettings</Form>
+        </DCCReference>
+        <DCCReference Include="Forms\formSAMILangExtractor.pas">
+            <Form>frmSAMILangExtractor</Form>
+        </DCCReference>
+        <DCCReference Include="Forms\formSaveAs.pas">
+            <Form>frmSaveAs</Form>
+        </DCCReference>
+        <DCCReference Include="Forms\formSearchAndReplace.pas">
+            <Form>frmSearchAndReplace</Form>
+        </DCCReference>
+        <DCCReference Include="Forms\formSetDelay.pas">
+            <Form>frmSetDelay</Form>
+        </DCCReference>
+        <DCCReference Include="Forms\formSetPauses.pas">
+            <Form>frmSetPauses</Form>
+        </DCCReference>
+        <DCCReference Include="Forms\formSettings.pas">
+            <Form>frmSettings</Form>
+        </DCCReference>
+        <DCCReference Include="Forms\formSplit.pas">
+            <Form>frmSplit</Form>
+        </DCCReference>
+        <DCCReference Include="Forms\formTimeExpanderReducer.pas">
+            <Form>frmTimeExpanderReducer</Form>
+        </DCCReference>
+        <DCCReference Include="Forms\formVariousInfo.pas">
+            <Form>frmVariousInfo</Form>
+        </DCCReference>
+        <DCCReference Include="Forms\formCompositeCustomInfo.pas">
+            <Form>frmCompositeCustomInfo</Form>
+        </DCCReference>
+        <DCCReference Include="Forms\formUnbreakSubtitles.pas">
+            <Form>frmUnbreakSubtitles</Form>
+        </DCCReference>
+        <DCCReference Include="Forms\formSmartLineAdjust.pas">
+            <Form>frmSmartLineAdjust</Form>
+        </DCCReference>
+        <DCCReference Include="Forms\formCombineSubtitles.pas">
+            <Form>frmCombineSubtitles</Form>
+        </DCCReference>
+        <DCCReference Include="Forms\formRoundTimeValues.pas">
+            <Form>frmRoundTimeValues</Form>
+        </DCCReference>
+        <DCCReference Include="Forms\formSubtitleAPIFormats.pas">
+            <Form>frmSubtitleAPIFormats</Form>
+        </DCCReference>
+        <DCCReference Include="Units\Functions.pas"/>
+        <DCCReference Include="Units\General.pas"/>
+        <DCCReference Include="Units\InfoErrorsFunctions.pas"/>
+        <DCCReference Include="Units\OCRScripts.pas"/>
+        <DCCReference Include="Units\Shortcuts.pas"/>
+        <DCCReference Include="Units\TreeViewHandle.pas"/>
+        <DCCReference Include="Units\Undo.pas"/>
+        <DCCReference Include="Units\USubtitleAdjust.pas"/>
+        <DCCReference Include="Units\VideoPreview.pas"/>
+        <DCCReference Include="Units\VTInPlaceEdition.pas"/>
+        <DCCReference Include="Lib\DirectX\DirectShow9.pas"/>
+        <DCCReference Include="Lib\DirectX\DirectDraw.pas"/>
+        <DCCReference Include="Lib\DirectX\DirectSound.pas"/>
+        <DCCReference Include="Lib\DirectX\Direct3D9.pas"/>
+        <DCCReference Include="Lib\DirectX\DXTypes.pas"/>
+        <DCCReference Include="Lib\HTMLPars.pas"/>
+        <DCCReference Include="Lib\RegExpr.pas"/>
+        <DCCReference Include="Lib\StrMan.pas"/>
+        <DCCReference Include="Lib\WinShell.pas"/>
+        <DCCReference Include="Units\USubtitlesFunctions.pas"/>
+        <DCCReference Include="SWComponents\Sources\MiSubtitulo.pas"/>
+        <DCCReference Include="SWComponents\Sources\MiMenu.pas"/>
+        <DCCReference Include="SWComponents\Sources\SWButton.pas"/>
+        <DCCReference Include="SWComponents\Sources\SWSeekBar.pas"/>
+        <DCCReference Include="SWComponents\Sources\SWTimeCounter.pas"/>
+        <DCCReference Include="SWComponents\Sources\SymbolDlg.pas"/>
+        <DCCReference Include="SWComponents\Sources\TimeMaskEdit.pas"/>
+        <DCCReference Include="SWComponents\Sources\USGraphics.pas"/>
+        <DCCReference Include="SWComponents\Sources\USSpeller.pas"/>
+        <DCCReference Include="Lib\FastStrings.pas"/>
+        <DCCReference Include="Units\USubtitleApi.pas"/>
+        <DCCReference Include="SWComponents\Sources\formSymbolDlg.pas">
+            <Form>frmSymbolDlg</Form>
+        </DCCReference>
+        <DCCReference Include="Units\FileTypes.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\PascalScript_Core_Ext_Reg.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\PascalScript_Core_Reg.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\PascalScript_Core_Reg_noDB.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSC_buttons.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSC_classes.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSC_comobj.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSC_controls.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSC_dateutils.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSC_DB.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSC_dll.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSC_extctrls.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSC_forms.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSC_graphics.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSC_menus.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSC_std.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSC_stdctrls.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSCompiler.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSComponent.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSComponent_COM.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSComponent_Controls.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSComponent_DB.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSComponent_Default.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSComponent_Forms.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSComponent_StdCtrls.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSComponentExt.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSDebugger.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSDisassembly.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSPreProcessor.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSR_buttons.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSR_classes.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSR_comobj.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSR_controls.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSR_dateutils.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSR_DB.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSR_dll.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSR_extctrls.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSR_forms.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSR_graphics.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSR_menus.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSR_std.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSR_stdctrls.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSRuntime.pas"/>
+        <DCCReference Include="..\3rd party components\pascalscript-master\Source\uPSUtils.pas"/>
+        <DCCReference Include="Units\PascalScriptsFunctions.pas"/>
+        <DCCReference Include="..\3rd party components\Virtual TreeView\Source\VirtualTrees.pas"/>
+        <DCCReference Include="..\3rd party components\Virtual TreeView\Source\VTAccessibility.pas"/>
+        <DCCReference Include="..\3rd party components\Virtual TreeView\Source\VTAccessibilityFactory.pas"/>
+        <DCCReference Include="..\3rd party components\Virtual TreeView\Source\VTHeaderPopup.pas"/>
+        <DCCReference Include="Units\_CommonTypes.pas"/>
+        <DCCReference Include="..\3rd party components\Other\Rcs_Resize.pas"/>
+        <None Include="Lib\DirectX\DirectX.inc"/>
+        <None Include="Lib\DirectX\Jedi.inc"/>
+        <None Include="Lib\StrMan.inc"/>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Delphi.Personality>
+                <Source>
+                    <Source Name="MainSource">SubtitleWorkshop.dpr</Source>
+                </Source>
+            </Delphi.Personality>
+            <Platforms>
+                <Platform value="Win32">True</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+</Project>
