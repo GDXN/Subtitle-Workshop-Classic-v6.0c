@@ -2,9 +2,10 @@
 // URL: subworkshop.sf.net
 // Licesne: GPL v3
 // Copyright: See Subtitle API's copyright information
-// File Description: Adobe Encore DVD (Old) subtitle format reading functionality
+// File Description: Adobe Encore DVD PAL subtitle format reading functionality
 
-function FileToSubtitles_ADOBEENCOREDVD (var Subtitles: TSubtitles; tmpSubFile: TSubtitleFile; FPS: Single; ExtraTime: Integer): Boolean;
+//added by adenry
+function FileToSubtitles_ADOBEENCOREDVDPAL(var Subtitles: TSubtitles; tmpSubFile: TSubtitleFile; FPS: Single; ExtraTime: Integer): Boolean;
 var
   i           : Integer;
   InitialTime : Integer;
@@ -17,17 +18,17 @@ begin
     i := 0;
     while i < tmpSubFile.Count do
     begin
-      if (TimeInFormat(Copy(tmpSubFile[i], 1, 11), 'hh:mm:ss:ff')) and
-         (TimeInFormat(Copy(tmpSubFile[i], 13, 11), 'hh:mm:ss:ff')) then
+      if (TimeInFormat(Copy(tmpSubFile[i], Pos(' ', tmpSubFile[i]) + 1, 11), 'hh:mm:ss:ff')) and
+         (TimeInFormat(Copy(tmpSubFile[i], Pos(' ', tmpSubFile[i]) + 13, 11), 'hh:mm:ss:ff')) then
       begin
-        InitialTime := HHMMSSFFTimeToMS(Copy(tmpSubFile[i], 1, 11), FPS);
-        FinalTime   := HHMMSSFFTimeToMS(Copy(tmpSubFile[i], 13, 11), FPS);
-        Text := Copy(tmpSubFile[i], 25, Length(tmpSubFile[i]));
+        InitialTime := HHMMSSFFTimeToMS(Copy(tmpSubFile[i], Pos(' ', tmpSubFile[i]) + 1, 11), FPS);
+        FinalTime   := HHMMSSFFTimeToMS(Copy(tmpSubFile[i], Pos(' ', tmpSubFile[i]) + 13, 11), FPS);
+        Text := Copy(tmpSubFile[i], Pos(' ', tmpSubFile[i]) + 25, Length(tmpSubFile[i]));
 
         Inc(i);
         while (i < tmpSubFile.Count) and
-              (TimeInFormat(Copy(tmpSubFile[i], 1, 11), 'hh:mm:ss:ff') = False) and
-              (TimeInFormat(Copy(tmpSubFile[i], 13, 11), 'hh:mm:ss:ff') = False) do
+              (TimeInFormat(Copy(tmpSubFile[i], Pos(' ', tmpSubFile[i]) + 1, 11), 'hh:mm:ss:ff') = False) and
+              (TimeInFormat(Copy(tmpSubFile[i], Pos(' ', tmpSubFile[i]) + 13, 11), 'hh:mm:ss:ff') = False) do
         begin
           if Text <> '' then
             Text := Text + #13#10 + tmpSubFile[i] else
