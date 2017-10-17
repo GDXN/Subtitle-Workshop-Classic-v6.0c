@@ -4,7 +4,7 @@
 // Copyright: See Subtitle Workshop's copyright information
 // File Description: Common type definitions
 
-unit _CommonTypes;
+unit CommonTypes;
 
 interface
 
