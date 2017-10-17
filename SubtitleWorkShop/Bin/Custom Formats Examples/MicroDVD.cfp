@@ -1,15 +1,13 @@
 [Information]
-Name=MacSUB
-Extension=*.scr
+Name=MicroDVD
+Extension=*.sub
 Time structure=hh:mm:ss,zzz
 Time=False
 FPS=25
-New line char=[Enter]
+New line char=|
 
 [Format text]
 {RepeatSub}
-/{swStart}
-{swText}
-/{swEnd}
+{{swStart}}{{swEnd}}{swText}
 {EndRepeat}
 
