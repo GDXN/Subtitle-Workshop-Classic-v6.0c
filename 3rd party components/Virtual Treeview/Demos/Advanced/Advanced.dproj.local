@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="AlignDemo.pas"/>
+    <File Path="AlignDemo.dfm"/>
+    <File Path="DrawTreeDemo.pas"/>
+    <File Path="DrawTreeDemo.dfm"/>
+    <File Path="Editors.pas"/>
+    <File Path="ExtraRes.rc"/>
+    <File Path="GeneralAbilitiesDemo.pas"/>
+    <File Path="GeneralAbilitiesDemo.dfm"/>
+    <File Path="GridDemo.pas"/>
+    <File Path="GridDemo.dfm"/>
+    <File Path="HeaderCustomDrawDemo.pas"/>
+    <File Path="HeaderCustomDrawDemo.dfm"/>
+    <File Path="Main.pas"/>
+    <File Path="Main.dfm"/>
+    <File Path="MultilineDemo.pas"/>
+    <File Path="MultilineDemo.dfm"/>
+    <File Path="PropertiesDemo.pas"/>
+    <File Path="PropertiesDemo.dfm"/>
+    <File Path="SpeedDemo.pas"/>
+    <File Path="SpeedDemo.dfm"/>
+    <File Path="States.pas"/>
+    <File Path="States.dfm"/>
+    <File Path="VisibilityDemo.pas"/>
+    <File Path="VisibilityDemo.dfm"/>
+    <File Path="WindowsXPStyleDemo.pas"/>
+    <File Path="WindowsXPStyleDemo.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>
