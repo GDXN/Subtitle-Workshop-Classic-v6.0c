@@ -1,0 +1,48 @@
+Following files have been changed or added with respect to their 'base version':
+
+Added:
+	Subtitle WorkShop\3rd party components\Other\Rcs_Resize.pas
+
+Changed in 3rd party package PascalScript with respect to https://github.com/remobjects/pascalscript:
+	Subtitle WorkShop\3rd party components\pascalscript-master\Source\uPSCompiler.pas
+	Subtitle WorkShop\3rd party components\pascalscript-master\Source\uPSC_forms.pas 
+	Subtitle WorkShop\3rd party components\pascalscript-master\Source\uPSC_menus.pas4
+
+Changed in the Subtitle workshop package with respect to Subtitle WorkSkop 6.0b version (https://sourceforge.net/projects/subworkshop/?source=directory):
+	Subtitle WorkShop\SubtitleWorkshop\Forms\formAdjustSubtitles.pas
+	Subtitle WorkShop\SubtitleWorkshop\Forms\formCustomFormats.pas
+	Subtitle WorkShop\SubtitleWorkshop\Forms\formInfoErrors.pas 
+	Subtitle WorkShop\SubtitleWorkshop\Forms\formInfoErrorsSettings.pas 
+	Subtitle WorkShop\SubtitleWorkshop\Forms\formJoin.pas 
+	Subtitle WorkShop\SubtitleWorkshop\Forms\formMain.pas 
+	Subtitle WorkShop\SubtitleWorkshop\Forms\formOutputSettings.pas 
+	Subtitle WorkShop\SubtitleWorkshop\Forms\formSaveAs.pas
+	Subtitle WorkShop\SubtitleWorkshop\Forms\formSetDelay.pas
+	Subtitle WorkShop\SubtitleWorkshop\Forms\formSettings.pas
+	Subtitle WorkShop\SubtitleWorkshop\Forms\formSplit.pas 
+	Subtitle WorkShop\SubtitleWorkshop\Forms\formVariousInfo.pas5
+	Subtitle WorkShop\SubtitleWorkshop\Lib\DirectX\DirectShow9.pas
+	Subtitle WorkShop\SubtitleWorkshop\Lib\StrMan.pas
+	Subtitle WorkShop\SubtitleWorkshop\Lib\DirectX\Jedi.inc
+	Subtitle WorkShop\SubtitleWorkshop\SubtitleAPI\SubtitleAPI.dpr
+	Subtitle WorkShop\SubtitleWorkshop\SubtitleAPI\Source\ReadFormats\FRead_SUBRIP.pas
+	Subtitle WorkShop\SubtitleWorkshop\SubtitleAPI\Source\SaveFormats\  all .pas files 
+	Subtitle WorkShop\SubtitleWorkshop\SubtitleAPI\Source\USubtitlesRead.pas
+	Subtitle WorkShop\SubtitleWorkshop\SubtitleAPI\Source\USubtitlesSave.pas 
+	Subtitle WorkShop\SubtitleWorkshop\SWComponents\Sources\MiMenu.pas 
+	Subtitle WorkShop\SubtitleWorkshop\SWComponents\Sources\MiSubtitulo.pas
+	Subtitle WorkShop\SubtitleWorkshop\SWComponents\Sources\SymbolDlg.pas
+	Subtitle WorkShop\SubtitleWorkshop\SWComponents\Sources\TimeMaskEdit.pas
+	Subtitle WorkShop\SubtitleWorkshop\Units\Functions.pas 
+	Subtitle WorkShop\SubtitleWorkshop\Units\General.pas
+	Subtitle WorkShop\SubtitleWorkshop\Units\PascalScriptsFunctions.pas
+	Subtitle WorkShop\SubtitleWorkshop\Units\TreeViewHandle.pas
+	Subtitle WorkShop\SubtitleWorkshop\Units\USubtitleApi.pas
+	Subtitle WorkShop\SubtitleWorkshop\Units\VideoPreview.pas 
+	Subtitle WorkShop\SubtitleWorkshop\Units\VTInPlaceEdition.pas 	  
+
+	Remark: in the Forms folder the corresponding .dfm files of .pas files above are also changed.
+
+There were no changes in the 3rd party package 'Virtual Treeview' (v5.1.2 was used, https://github.com/Virtual-TreeView/Virtual-TreeView/releases?after=V5.1.3), or in 
+package 'XML Parser' (v1.0.20 was used).
+
