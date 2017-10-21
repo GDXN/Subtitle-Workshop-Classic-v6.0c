@@ -136,7 +136,7 @@ begin
 		      and
               //(IsInteger(tmpSubFile[i+c]) = False) and //removed by adenry 2013.04.16 - this would omit lines containing only numbers!
               ( (i + c = tmpSubFile.Count - 1) or 
-			    ( (i + c + 1 <= tmpSubFile.Count - 1) and // added by dany
+			    ( (i + c + 1 <= tmpSubFile.Count - 1) and // added by Kameleon
 				  (Pos(' --> ', tmpSubFile[i + c + 1]) = 0)) 
 			  ) 
 			  and  //added by adenry 2013.04.16
