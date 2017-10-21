@@ -14,7 +14,7 @@ function SubtitlesToFile_SUBRIP(Subtitles: TSubtitles; const FileName: String; F
     {$ENDIF}
   //DELETE ALL TAGS:
       if WorkWithTags = False then
-        //Text := RemoveSWTags(Text, True, True, True, True) // <--------- Dany
+        //Text := RemoveSWTags(Text, True, True, True, True) // <--------- Kameleon
         else
       {$IFNDEF VIPLAY}
   //SINGLE TAGS MODE:
@@ -32,7 +32,7 @@ function SubtitlesToFile_SUBRIP(Subtitles: TSubtitles; const FileName: String; F
         //removed by adenry: end
         
         //added by adenry: begin 2013.04.11
-        //Text := SetTagsForSingleTagsMode(Text, True); // <------ Dany
+        //Text := SetTagsForSingleTagsMode(Text, True); // <------ Kameleon
         Text := ReplaceString(Text, '<c:#', '<font color=');
         Text := ReplaceString(Text, '</c>', '</font>');
         //added by adenry: end
@@ -43,7 +43,7 @@ function SubtitlesToFile_SUBRIP(Subtitles: TSubtitles; const FileName: String; F
   //MULTI TAGS MODE:
       if MultiTagsMode then
       begin
-        //Text := CloseUnclosedTags(Text, '<b>', '</b>'); // <------ Dany
+        //Text := CloseUnclosedTags(Text, '<b>', '</b>'); // <------ Kameleon
         //Text := CloseUnclosedTags(Text, '<i>', '</i>');
         //Text := CloseUnclosedTags(Text, '<u>', '</u>');
         //Text := CloseUnclosedTags(Text, '<c:#', '</c>');
