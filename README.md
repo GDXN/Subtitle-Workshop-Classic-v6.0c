@@ -6,6 +6,7 @@ More detailed:
   - Adapted also the "Insert Symbol" screen.
   - UTF8 format is detected automatically.
   - The "Save as" screen has been adapted to add the possibility to save a subtitle as UTF8.
+* Detection and selection of more than one audio stream is implemented.  
 * Made a number of screens re-size-able:
   - The "Settings" screen
   - The "Output settings" screen and
