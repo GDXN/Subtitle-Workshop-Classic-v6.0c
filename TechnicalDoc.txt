@@ -2,8 +2,8 @@ These versions of Subtitle Workshop and Subtitle API are ported to Delphi 10.2 (
 
 Additional components Subtitle Workshop requires:
 - SWComponents (included in source, see "SWComponents" directory)
-- PascalScript from REMObjects (included in source, see "3rd party components" directory)
-- VirtualTreeView (included in source, v5.1.2 was used, see https://github.com/Virtual-TreeView/Virtual-TreeView/releases?after=V5.1.3)
+- PascalScript from REMObjects (included in source, see "3rd party components" directory, https://github.com/remobjects/pascalscript)
+- VirtualTreeView (included in source, v6.7.0 was used, see https://github.com/Virtual-TreeView/Virtual-TreeView/releases)
 
 Additional components Subtitle API requires:
 - XML Parser (included in source, v1.0.20 was used, see http://www.destructor.de/xmlparser/index.htm)
@@ -47,6 +47,7 @@ Changed in the Subtitle workshop package with respect to Subtitle WorkSkop 6.0b 
 	Subtitle WorkShop\SubtitleWorkshop\Forms\formVariousInfo.pas5
 	Subtitle WorkShop\SubtitleWorkshop\Lib\DirectX\DirectShow9.pas
 	Subtitle WorkShop\SubtitleWorkshop\Lib\StrMan.pas
+	Subtitle WorkShop\SubtitleWorkshop\Lib\FastStrings.pas
 	Subtitle WorkShop\SubtitleWorkshop\Lib\DirectX\Jedi.inc
 	Subtitle WorkShop\SubtitleWorkshop\SubtitleAPI\SubtitleAPI.dpr
 	Subtitle WorkShop\SubtitleWorkshop\SubtitleAPI\Source\ReadFormats\FRead_SUBRIP.pas
@@ -68,4 +69,190 @@ Changed in the Subtitle workshop package with respect to Subtitle WorkSkop 6.0b 
 	Remark: in the Forms folder the corresponding .dfm files of .pas files above are also changed.
 
 There were no changes in the 3rd party package 'Virtual Treeview' or in package 'XML Parser'.
+
+
+
+Downloading and Unpacking the source code
+=========================================
+
+Make following folder structure:
+
+C:\Deplhi10 Projects\Subtitle Workshop\SubtitlewWorkshop
+C:\Deplhi10 Projects\Subtitle Workshop\3rd party components
+
+Download:
+
+goto https://sourceforge.net/projects/subtitle-workshop-classic/
+select 'Files'
+goto 'Sources'
+single click 'Subtitle Workshop Sources.zip'
+after the download ended:
+unpack the zipfile in C:\Delphi10 Projects\Subtitle WorkShop\SubtitleWorkshop
+
+goto https://sourceforge.net/projects/subtitle-workshop-classic/
+select 'Files'
+goto 'Sources'
+single click '3rd party components Sources.zip'
+after the download ended:
+unpack the zipfile in C:\Delphi10 Projects\Subtitle WorkShop\3rd party components
+
+
+Expected folder structure for package installation instructions below:
+======================================================================
+
+C:\Delphi10 Projects
+	Subtitle Workshop
+		SubtitleWorkshop
+			Bin
+			DCU
+			Forms
+			Graphics
+			Lib
+			Manual_Files
+			Packages to be Installed
+			SubtitleAPI
+			SWComponents
+			Units
+		3rd party components
+			pascalscript-master
+			Virtual TreeView
+			xmlparser-1.0.20
+
+
+If you have a different structure then adapt the paths below.
+
+
+Package Installation
+====================
+
+--> Only needed for software developers (contributers to the project).
+
+Make sure that packages to be installed are not yet installed (check in Menu 'Component' -> 'Install Packages').
+To remove packages, select them and click 'Remove'.
+
+The already installed pacakges are named:
+	RemObjects Pascal Script - Core Package
+	Subtitle Workshop Components
+	VirtualTreeview Controls
+	XML Parser Components
+
+2 methods of installation exist:
+- using the precompiled version (so, without compiling again)
+- with compiling (e.g. after a change in its code)
+
+1. Without compiling
+--------------------
+
+All packages are delivered pre-compiled in the software (C:\Delphi10 Projects\Subtitle WorkShop\SubtitleWorkshop\Packages to be installed)
+
+Copy all files 
+from C:\Delphi10 Projects\Subtitle WorkShop\SubtitleWorkshop\Packages to be installed\Bpl
+to   C:\Users\Public\Documents\Embarcadero\Studio\19.0\Dcp\Bpl
+ 
+Copy all files
+from C:\Delphi10 Projects\Subtitle WorkShop\SubtitleWorkshop\Packages to be installed\Dcp
+to   C:\Users\Public\Documents\Embarcadero\Studio\19.0\Dcp\Dcp
+
+Enter Delphi 
+Menu 'Component' -> 'Install Packages'
+
+Click Add 
+select C:\Users\Public\Documents\Embarcadero\Studio\19.0\Dcp\Bpl\PascalScript_Core_D25.bpl
+Click Open
+
+Click Add
+select C:\Users\Public\Documents\Embarcadero\Studio\19.0\Dcp\Bpl\VirtualTreesD25.bpl
+Click Open
+
+Click Add
+select C:\Users\Public\Documents\Embarcadero\Studio\19.0\Dcp\Bpl\XmlComponents_2007_XE.bpl
+Click Open
+
+Click Add
+select C:\Users\Public\Documents\Embarcadero\Studio\19.0\Dcp\Bpl\SWComponents.bpl
+Click Open
+
+Click OK
+
+Done...
+
+
+2. With Compiling
+-----------------
+
+Enter Delphi
+ 
+(* = in the project manager)  
+ 
+Open Project C:\Delphi10 Projects\Subtitle WorkShop\3rd party components\pascalscript-master\Source\PascalScript_Core_D25.dproj
+*Click right on PascalScript_Core_D25.bpl
+*Click Build
+*Click right on PascalScript_Core_D25.bpl
+*Click Install
+
+Open Project C:\Delphi10 Projects\Subtitle WorkShop\3rd party components\Virtual TreeView\Packages\RAD Studio 10.2\VirtualTreeView.groupproj
+*Click right on VirtualTreeView (top line)
+*Click Build All
+*Click right on VirtualTreesD25.bpl
+*Click Install
+
+Open Project C:\Delphi10 Projects\Subtitle WorkShop\3rd party components\xmlparser-1.0.20\XmlComponents_2007_XE.dproj
+*Click right on XmlComponents_2007_XE.bpl
+*Click Build
+*Click right on XmlComponents_2007_XE.bpl
+*Click Install
+
+Open Project C:\Delphi10 Projects\Subtitle WorkShop\SubtitleWorkshop\SWComponents\SWComponents.dproj
+*Click right on SWComponents.bpl
+*Click Build
+*Click right on SWComponents.bpl
+*Click Install
+
+Done...
+
+
+SubtitleAPI DLL 
+===============
+
+The DLL is needed together with the subtitle workshop executable (SubtitleWorkshop.exe).
+
+It is delivered pre-compiled in the software (C:\Delphi10 Projects\Subtitle WorkShop\SubtitleWorkshop\Bin\SubtitleAPI\SubtitleAPI.dll).
+
+The DLL does not need to be installed as packages do, it has to be  placed in '.\SubtitleAPI\SubtitleAPI.dll' wherein '.' is the directory where the subtitle workshop executable (SubtitleWorkshop.exe) resides. 
+
+
+To compile it: 
+-------------
+
+--> Only for software developers (contributers to the project).
+
+Open Project C:\Delphi10 Projects\Subtitle WorkShop\SubtitleWorkshop\SubtitleAPI\SubtitleAPI.dproj
+*Click right on SubtitleAPI.dll
+*Click Build
+
+Done...
+
+
+The Subtitle workshop executable
+================================
+
+Its name is SubtitleWorkshop.exe and it resides pre-compiled here: 'C:\Delphi10 Projects\Subtitle WorkShop\SubtitleWorkshop\Bin\SubtitleWorkshop.exe'.
+
+To compile it:
+-------------
+
+--> Only for software developers (contributers to the project).
+
+Open Project C:\Delphi10 Projects\Subtitle WorkShop\SubtitleWorkshop\SubtitleWorkshop.dproj
+*Click right on SubtitleWorkshop.exe
+*Click Build
+
+Done ...
+ 
+
+
+
+
+
+
 
