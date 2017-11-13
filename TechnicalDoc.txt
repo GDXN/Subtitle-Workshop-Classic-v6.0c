@@ -25,46 +25,46 @@ Subtitle Workshop and Subtitle API are released under the GNU/GPL 3 license.
 Following files have been changed or added with respect to their 'base version':
 
 Added:
-	Subtitle WorkShop\3rd party components\Other\Rcs_Resize.pas
+	Subtitle Workshop\3rd party components\Other\Rcs_Resize.pas
 
 Changed in 3rd party package PascalScript with respect to https://github.com/remobjects/pascalscript:
-	Subtitle WorkShop\3rd party components\pascalscript-master\Source\uPSCompiler.pas
-	Subtitle WorkShop\3rd party components\pascalscript-master\Source\uPSC_forms.pas 
-	Subtitle WorkShop\3rd party components\pascalscript-master\Source\uPSC_menus.pas4
+	Subtitle Workshop\3rd party components\pascalscript-master\Source\uPSCompiler.pas
+	Subtitle Workshop\3rd party components\pascalscript-master\Source\uPSC_forms.pas 
+	Subtitle Workshop\3rd party components\pascalscript-master\Source\uPSC_menus.pas4
 
 Changed in the Subtitle workshop package with respect to Subtitle WorkSkop 6.0b version (https://sourceforge.net/projects/subworkshop/?source=directory):
-	Subtitle WorkShop\SubtitleWorkshop\Forms\formAdjustSubtitles.pas
-	Subtitle WorkShop\SubtitleWorkshop\Forms\formCustomFormats.pas
-	Subtitle WorkShop\SubtitleWorkshop\Forms\formInfoErrors.pas 
-	Subtitle WorkShop\SubtitleWorkshop\Forms\formInfoErrorsSettings.pas 
-	Subtitle WorkShop\SubtitleWorkshop\Forms\formJoin.pas 
-	Subtitle WorkShop\SubtitleWorkshop\Forms\formMain.pas 
-	Subtitle WorkShop\SubtitleWorkshop\Forms\formOutputSettings.pas 
-	Subtitle WorkShop\SubtitleWorkshop\Forms\formSaveAs.pas
-	Subtitle WorkShop\SubtitleWorkshop\Forms\formSetDelay.pas
-	Subtitle WorkShop\SubtitleWorkshop\Forms\formSettings.pas
-	Subtitle WorkShop\SubtitleWorkshop\Forms\formSplit.pas 
-	Subtitle WorkShop\SubtitleWorkshop\Forms\formVariousInfo.pas5
-	Subtitle WorkShop\SubtitleWorkshop\Lib\DirectX\DirectShow9.pas
-	Subtitle WorkShop\SubtitleWorkshop\Lib\StrMan.pas
-	Subtitle WorkShop\SubtitleWorkshop\Lib\FastStrings.pas
-	Subtitle WorkShop\SubtitleWorkshop\Lib\DirectX\Jedi.inc
-	Subtitle WorkShop\SubtitleWorkshop\SubtitleAPI\SubtitleAPI.dpr
-	Subtitle WorkShop\SubtitleWorkshop\SubtitleAPI\Source\ReadFormats\FRead_SUBRIP.pas
-	Subtitle WorkShop\SubtitleWorkshop\SubtitleAPI\Source\SaveFormats\  all .pas files 
-	Subtitle WorkShop\SubtitleWorkshop\SubtitleAPI\Source\USubtitlesRead.pas
-	Subtitle WorkShop\SubtitleWorkshop\SubtitleAPI\Source\USubtitlesSave.pas 
-	Subtitle WorkShop\SubtitleWorkshop\SWComponents\Sources\MiMenu.pas 
-	Subtitle WorkShop\SubtitleWorkshop\SWComponents\Sources\MiSubtitulo.pas
-	Subtitle WorkShop\SubtitleWorkshop\SWComponents\Sources\SymbolDlg.pas
-	Subtitle WorkShop\SubtitleWorkshop\SWComponents\Sources\TimeMaskEdit.pas
-	Subtitle WorkShop\SubtitleWorkshop\Units\Functions.pas 
-	Subtitle WorkShop\SubtitleWorkshop\Units\General.pas
-	Subtitle WorkShop\SubtitleWorkshop\Units\PascalScriptsFunctions.pas
-	Subtitle WorkShop\SubtitleWorkshop\Units\TreeViewHandle.pas
-	Subtitle WorkShop\SubtitleWorkshop\Units\USubtitleApi.pas
-	Subtitle WorkShop\SubtitleWorkshop\Units\VideoPreview.pas 
-	Subtitle WorkShop\SubtitleWorkshop\Units\VTInPlaceEdition.pas 	  
+	Subtitle Workshop\SubtitleWorkshop\Forms\formAdjustSubtitles.pas
+	Subtitle Workshop\SubtitleWorkshop\Forms\formCustomFormats.pas
+	Subtitle Workshop\SubtitleWorkshop\Forms\formInfoErrors.pas 
+	Subtitle Workshop\SubtitleWorkshop\Forms\formInfoErrorsSettings.pas 
+	Subtitle Workshop\SubtitleWorkshop\Forms\formJoin.pas 
+	Subtitle Workshop\SubtitleWorkshop\Forms\formMain.pas 
+	Subtitle Workshop\SubtitleWorkshop\Forms\formOutputSettings.pas 
+	Subtitle Workshop\SubtitleWorkshop\Forms\formSaveAs.pas
+	Subtitle Workshop\SubtitleWorkshop\Forms\formSetDelay.pas
+	Subtitle Workshop\SubtitleWorkshop\Forms\formSettings.pas
+	Subtitle Workshop\SubtitleWorkshop\Forms\formSplit.pas 
+	Subtitle Workshop\SubtitleWorkshop\Forms\formVariousInfo.pas5
+	Subtitle Workshop\SubtitleWorkshop\Lib\DirectX\DirectShow9.pas
+	Subtitle Workshop\SubtitleWorkshop\Lib\StrMan.pas
+	Subtitle Workshop\SubtitleWorkshop\Lib\FastStrings.pas
+	Subtitle Workshop\SubtitleWorkshop\Lib\DirectX\Jedi.inc
+	Subtitle Workshop\SubtitleWorkshop\SubtitleAPI\SubtitleAPI.dpr
+	Subtitle Workshop\SubtitleWorkshop\SubtitleAPI\Source\ReadFormats\FRead_SUBRIP.pas
+	Subtitle Workshop\SubtitleWorkshop\SubtitleAPI\Source\SaveFormats\  all .pas files 
+	Subtitle Workshop\SubtitleWorkshop\SubtitleAPI\Source\USubtitlesRead.pas
+	Subtitle Workshop\SubtitleWorkshop\SubtitleAPI\Source\USubtitlesSave.pas 
+	Subtitle Workshop\SubtitleWorkshop\SWComponents\Sources\MiMenu.pas 
+	Subtitle Workshop\SubtitleWorkshop\SWComponents\Sources\MiSubtitulo.pas
+	Subtitle Workshop\SubtitleWorkshop\SWComponents\Sources\SymbolDlg.pas
+	Subtitle Workshop\SubtitleWorkshop\SWComponents\Sources\TimeMaskEdit.pas
+	Subtitle Workshop\SubtitleWorkshop\Units\Functions.pas 
+	Subtitle Workshop\SubtitleWorkshop\Units\General.pas
+	Subtitle Workshop\SubtitleWorkshop\Units\PascalScriptsFunctions.pas
+	Subtitle Workshop\SubtitleWorkshop\Units\TreeViewHandle.pas
+	Subtitle Workshop\SubtitleWorkshop\Units\USubtitleApi.pas
+	Subtitle Workshop\SubtitleWorkshop\Units\VideoPreview.pas 
+	Subtitle Workshop\SubtitleWorkshop\Units\VTInPlaceEdition.pas 	  
 
 	Remark: in the Forms folder the corresponding .dfm files of .pas files above are also changed.
 
@@ -87,14 +87,14 @@ select 'Files'
 goto 'Sources'
 single click 'Subtitle Workshop Sources.zip'
 after the download ended:
-unpack the zipfile in C:\Delphi10 Projects\Subtitle WorkShop\SubtitleWorkshop
+unpack the zipfile in C:\Delphi10 Projects\Subtitle Workshop\SubtitleWorkshop
 
 goto https://sourceforge.net/projects/subtitle-workshop-classic/
 select 'Files'
 goto 'Sources'
 single click '3rd party components Sources.zip'
 after the download ended:
-unpack the zipfile in C:\Delphi10 Projects\Subtitle WorkShop\3rd party components
+unpack the zipfile in C:\Delphi10 Projects\Subtitle Workshop\3rd party components
 
 
 Expected folder structure for package installation instructions below:
@@ -143,33 +143,33 @@ The already installed pacakges are named:
 1. Without compiling
 --------------------
 
-All packages are delivered pre-compiled in the software (C:\Delphi10 Projects\Subtitle WorkShop\SubtitleWorkshop\Packages to be installed)
+All packages are delivered pre-compiled in the software (C:\Delphi10 Projects\Subtitle Workshop\SubtitleWorkshop\Packages to be installed)
 
 Copy all files 
-from C:\Delphi10 Projects\Subtitle WorkShop\SubtitleWorkshop\Packages to be installed\Bpl
-to   C:\Users\Public\Documents\Embarcadero\Studio\19.0\Dcp\Bpl
+from C:\Delphi10 Projects\Subtitle Workshop\SubtitleWorkshop\Packages to be installed\Bpl
+to   C:\Users\Public\Documents\Embarcadero\Studio\19.0\Bpl
  
 Copy all files
-from C:\Delphi10 Projects\Subtitle WorkShop\SubtitleWorkshop\Packages to be installed\Dcp
-to   C:\Users\Public\Documents\Embarcadero\Studio\19.0\Dcp\Dcp
+from C:\Delphi10 Projects\Subtitle Workshop\SubtitleWorkshop\Packages to be installed\Dcp
+to   C:\Users\Public\Documents\Embarcadero\Studio\19.0\Dcp
 
 Enter Delphi 
 Menu 'Component' -> 'Install Packages'
 
 Click Add 
-select C:\Users\Public\Documents\Embarcadero\Studio\19.0\Dcp\Bpl\PascalScript_Core_D25.bpl
+select C:\Users\Public\Documents\Embarcadero\Studio\19.0\Bpl\PascalScript_Core_D25.bpl
 Click Open
 
 Click Add
-select C:\Users\Public\Documents\Embarcadero\Studio\19.0\Dcp\Bpl\VirtualTreesD25.bpl
+select C:\Users\Public\Documents\Embarcadero\Studio\19.0\Bpl\VirtualTreesD25.bpl
 Click Open
 
 Click Add
-select C:\Users\Public\Documents\Embarcadero\Studio\19.0\Dcp\Bpl\XmlComponents_2007_XE.bpl
+select C:\Users\Public\Documents\Embarcadero\Studio\19.0\Bpl\XmlComponents_2007_XE.bpl
 Click Open
 
 Click Add
-select C:\Users\Public\Documents\Embarcadero\Studio\19.0\Dcp\Bpl\SWComponents.bpl
+select C:\Users\Public\Documents\Embarcadero\Studio\19.0\\Bpl\SWComponents.bpl
 Click Open
 
 Click OK
@@ -184,25 +184,25 @@ Enter Delphi
  
 (* = in the project manager)  
  
-Open Project C:\Delphi10 Projects\Subtitle WorkShop\3rd party components\pascalscript-master\Source\PascalScript_Core_D25.dproj
+Open Project C:\Delphi10 Projects\Subtitle Workshop\3rd party components\pascalscript-master\Source\PascalScript_Core_D25.dproj
 *Click right on PascalScript_Core_D25.bpl
 *Click Build
 *Click right on PascalScript_Core_D25.bpl
 *Click Install
 
-Open Project C:\Delphi10 Projects\Subtitle WorkShop\3rd party components\Virtual TreeView\Packages\RAD Studio 10.2\VirtualTreeView.groupproj
+Open Project C:\Delphi10 Projects\Subtitle Workshop\3rd party components\Virtual TreeView\Packages\RAD Studio 10.2\VirtualTreeView.groupproj
 *Click right on VirtualTreeView (top line)
 *Click Build All
 *Click right on VirtualTreesD25.bpl
 *Click Install
 
-Open Project C:\Delphi10 Projects\Subtitle WorkShop\3rd party components\xmlparser-1.0.20\XmlComponents_2007_XE.dproj
+Open Project C:\Delphi10 Projects\Subtitle Workshop\3rd party components\xmlparser-1.0.20\XmlComponents_2007_XE.dproj
 *Click right on XmlComponents_2007_XE.bpl
 *Click Build
 *Click right on XmlComponents_2007_XE.bpl
 *Click Install
 
-Open Project C:\Delphi10 Projects\Subtitle WorkShop\SubtitleWorkshop\SWComponents\SWComponents.dproj
+Open Project C:\Delphi10 Projects\Subtitle Workshop\SubtitleWorkshop\SWComponents\SWComponents.dproj
 *Click right on SWComponents.bpl
 *Click Build
 *Click right on SWComponents.bpl
@@ -216,7 +216,7 @@ SubtitleAPI DLL
 
 The DLL is needed together with the subtitle workshop executable (SubtitleWorkshop.exe).
 
-It is delivered pre-compiled in the software (C:\Delphi10 Projects\Subtitle WorkShop\SubtitleWorkshop\Bin\SubtitleAPI\SubtitleAPI.dll).
+It is delivered pre-compiled in the software (C:\Delphi10 Projects\Subtitle Workshop\SubtitleWorkshop\Bin\SubtitleAPI\SubtitleAPI.dll).
 
 The DLL does not need to be installed as packages do, it has to be  placed in '.\SubtitleAPI\SubtitleAPI.dll' wherein '.' is the directory where the subtitle workshop executable (SubtitleWorkshop.exe) resides. 
 
@@ -226,7 +226,7 @@ To compile it:
 
 --> Only for software developers (contributers to the project).
 
-Open Project C:\Delphi10 Projects\Subtitle WorkShop\SubtitleWorkshop\SubtitleAPI\SubtitleAPI.dproj
+Open Project C:\Delphi10 Projects\Subtitle Workshop\SubtitleWorkshop\SubtitleAPI\SubtitleAPI.dproj
 *Click right on SubtitleAPI.dll
 *Click Build
 
@@ -236,14 +236,14 @@ Done...
 The Subtitle workshop executable
 ================================
 
-Its name is SubtitleWorkshop.exe and it resides pre-compiled here: 'C:\Delphi10 Projects\Subtitle WorkShop\SubtitleWorkshop\Bin\SubtitleWorkshop.exe'.
+Its name is SubtitleWorkshop.exe and it resides pre-compiled here: 'C:\Delphi10 Projects\Subtitle Workshop\SubtitleWorkshop\Bin\SubtitleWorkshop.exe'.
 
 To compile it:
 -------------
 
 --> Only for software developers (contributers to the project).
 
-Open Project C:\Delphi10 Projects\Subtitle WorkShop\SubtitleWorkshop\SubtitleWorkshop.dproj
+Open Project C:\Delphi10 Projects\Subtitle Workshop\SubtitleWorkshop\SubtitleWorkshop.dproj
 *Click right on SubtitleWorkshop.exe
 *Click Build
 
