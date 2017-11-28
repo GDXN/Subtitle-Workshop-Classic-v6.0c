@@ -157,24 +157,28 @@ Enter Delphi
  
 Open Project C:\Delphi10 Projects\Subtitle Workshop\3rd party components\pascalscript-master\Source\PascalScript_Core_D25.dproj
 *Click right on PascalScript_Core_D25.bpl
+*Click Clean
 *Click Build
 *Click right on PascalScript_Core_D25.bpl
 *Click Install
 
 Open Project C:\Delphi10 Projects\Subtitle Workshop\3rd party components\Virtual TreeView\Packages\RAD Studio 10.2\VirtualTreeView.groupproj
-*Click right on VirtualTreeView (top line)
+*Click right on VirtualTreeView (top line!)
+*Click Clean All
 *Click Build All
 *Click right on VirtualTreesD25.bpl
 *Click Install
 
 Open Project C:\Delphi10 Projects\Subtitle Workshop\3rd party components\xmlparser-1.0.20\XmlComponents_2007_XE.dproj
 *Click right on XmlComponents_2007_XE.bpl
+*Click Clean
 *Click Build
 *Click right on XmlComponents_2007_XE.bpl
 *Click Install
 
 Open Project C:\Delphi10 Projects\Subtitle Workshop\main\SWComponents\SWComponents.dproj
 *Click right on SWComponents.bpl
+*Click Clean
 *Click Build
 *Click right on SWComponents.bpl
 *Click Install
@@ -199,6 +203,7 @@ To compile it:
 
 Open Project C:\Delphi10 Projects\Subtitle Workshop\main\SubtitleAPI\SubtitleAPI.dproj
 *Click right on SubtitleAPI.dll
+*Click Clean
 *Click Build
 
 Done...
@@ -226,7 +231,8 @@ Done ...
 Following files have been changed or added with respect to their 'base version (6.0b)':
 
 Added:
-	Subtitle Workshop\3rd party components\Other\Rcs_Resize.pas
+	Subtitle WorkShop\main\Units\Rcs_Resize.pas
+	Subtitle WorkShop\main\SWComponents\Sources\AsyncCalls.pas
 
 Changed in 3rd party package PascalScript with respect to https://github.com/remobjects/pascalscript:
 	Subtitle Workshop\3rd party components\pascalscript-master\Source\uPSCompiler.pas
@@ -265,7 +271,8 @@ Changed in the Subtitle workshop package with respect to Subtitle WorkSkop 6.0b 
 	Subtitle Workshop\main\Units\TreeViewHandle.pas
 	Subtitle Workshop\main\Units\USubtitleApi.pas
 	Subtitle Workshop\main\Units\VideoPreview.pas 
-	Subtitle Workshop\main\Units\VTInPlaceEdition.pas 	  
+	Subtitle Workshop\main\Units\VTInPlaceEdition.pas 
+	Subtitle WorkShop\main\SWComponents\Sources\USSpeller.pas
 
 	Remark: in the Forms folder the corresponding .dfm files of .pas files above are also changed.
 
