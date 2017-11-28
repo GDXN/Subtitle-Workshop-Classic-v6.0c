@@ -22,3 +22,4 @@ More detailed:
 * The file size reported by "Movie Information" is correct now also for files > 4 Gb.
 * Added the "m4v" movie format as a valid one.
 * Removed a few situations where errors could occur (e.g. doubleclicking on an empty errors list).
+* Made spellcheck work with Word 2016.
