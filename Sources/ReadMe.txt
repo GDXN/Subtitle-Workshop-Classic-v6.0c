@@ -37,3 +37,5 @@ More detailed:
     Removed a few situations where errors could occur (e.g. doubleclicking on an empty errors list).
 	
     Make spellcheck work again with Word 2016.
+    
+    Corrected an error reading a.o. 'SAMI' subtitles.
