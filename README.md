@@ -23,3 +23,4 @@ More detailed:
 * Added the "m4v" movie format as a valid one.
 * Removed a few situations where errors could occur (e.g. doubleclicking on an empty errors list).
 * Made spellcheck work with Word 2016.
+* Corrected an error reading a.o. 'SAMI' subtitles.
